@@ -14,7 +14,7 @@ app.post("/workouts", (req, res) => {
 
 
   app.get('/workouts',(req, res) => {
-    db.findAll({})
+    db.find({})
     .then(data=>{
       console.log('get route', data);
       res.json(data);
@@ -26,7 +26,7 @@ app.post("/workouts", (req, res) => {
 
 
   app.get('/workouts/range',(req, res) => {
-    db.findAll({}).limit(14)
+    db.find({}).limit(14)
     .then(data=>{
       console.log('get route', data);
       res.json(data);
